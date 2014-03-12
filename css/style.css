@@ -1,3 +1,21 @@
+/* Fonts
+================================ */
+@font-face {
+  font-family: proximanova_regular;
+  src: url(../fonts/proximanova-reg-webfont.woff); }
+
+@font-face {
+  font-family: proximanova_regular_italic;
+  src: url(../fonts/proximanova-regit-webfont.woff); }
+
+@font-face {
+  font-family: proximanova_bold;
+  src: url(../fonts/proximanova-bold-webfont.woff); }
+
+@font-face {
+  font-family: proximanova_light;
+  src: url(../fonts/proximanova-light-webfont.woff); }
+
 /* Global
 ================================ */
 * {
@@ -10,7 +28,7 @@
     text-decoration: none; }
   * h1 {
     font-family: 'proximanova_light';
-    font-size: 68px;
+    font-size: 30px;
     color: #221f1f;
     text-align: center;
     cursor: default; }
@@ -25,7 +43,8 @@
     font-family: 'proximanova_regular_italic'; }
   * button {
     align-items: flex-start;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
   * img {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -75,7 +94,7 @@
   top: 14px;
   /*change*/
   width: 60px;
-  /*change*/
+  height: 75px;
   position: relative;
   left: 0; }
 
@@ -167,7 +186,7 @@
     max-width: 560px;
     display: block;
     position: relative;
-    top: 75px;
+    top: 100px;
     /*550px*/
     left: 0;
     /*50%*/
@@ -276,11 +295,11 @@
     margin-right: 20px;
     font-size: 16px;
     padding: 0 20px; }
-  .s4 .s3-btn {
+  .s4 .s4-btn {
     margin: 0 auto;
     border: 2px solid #fff;
     color: #fff; }
-    .s4 .s3-btn:hover {
+    .s4 .s4-btn:hover {
       background: #fff;
       color: #16ffbd; }
 
@@ -345,7 +364,9 @@
     color: #828080;
     text-decoration: none; }
   #footer p {
-    display: none; }
+    display: none;
+    font-family: 'proximanova_regular';
+    font-size: 12px; }
 
 /* Columns
 ================================ */
@@ -417,74 +438,169 @@
 ================================ */
 /* Media Queries
 ================================ */
-@media (min-width: 1px) and (max-width: 767px) {
-  .grid-container > [class^="grid-"] {
-    padding-top: 5px;
-    padding-bottom: 5px; } }
-@media (min-width: 768px) {
-  /* Columns
-  ================================ */
-  .grid-container > [class^="grid-"] {
-    float: left;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 2%; }
-
-  .grid-container > [class^="grid-"]:first-child {
-    margin-left: 0; }
-
-  .grid-container > [class^="grid-"]:last-child {
-    float: right; }
-
-  /* Columns are 65px wide, with 20px gutters
-  =========================================== */
-  .grid-1 {
-    width: 6.5%; }
-
-  .grid-2 {
-    width: 15%; }
-
-  .grid-3 {
-    width: 23.5%; }
-
+@media (min-width: 1px) and (max-width: 639px) {
   .grid-4 {
-    width: 32%; }
-
-  .grid-5 {
-    width: 40.5%; }
-
-  .grid-6 {
-    width: 49%; }
-
-  .grid-7 {
-    width: 57.5%; }
-
-  .grid-8 {
-    width: 66%; }
-
-  .grid-9 {
-    width: 74.5%; }
-
-  .grid-10 {
-    width: 83%; }
-
-  .grid-11 {
-    width: 91.5%; }
-
-  .grid-12 {
+    width: 100%; } }
+@media (min-width: 640px) and (max-width: 1000px) {
+  .grid-4 {
     width: 100%; }
 
-  /* Clearfix
-  ================================ */
-  .row:before,
-  .clearfix:before,
-  .clearfix:after {
-    content: " ";
-    display: table; }
+  #header {
+    padding: 0 40px; }
 
-  .clearfix:after {
-    clear: both; } }
+  .logo {
+    top: 25px;
+    width: 88px;
+    height: 110px; }
+
+  #menu {
+    top: 75px; }
+    #menu li {
+      margin: 0 0 0 60px; }
+      #menu li a {
+        font-size: 18px; }
+    #menu .menu-btn {
+      font-size: 18px;
+      margin-top: -45px;
+      margin-left: 40px; }
+
+  .s1 {
+    background: #24282f;
+    width: 100%;
+    height: 600px; }
+    .s1 .title {
+      top: 230px; }
+    .s1 h1 {
+      font-size: 60px;
+      line-height: 75px; }
+    .s1 .social-main {
+      width: 560px;
+      top: 170px; }
+
+  .s2 h1 {
+    font-size: 45px;
+    line-height: 75px; }
+  .s2 p {
+    font-size: 20px; }
+
+  .s3 h2 {
+    font-size: 34px; }
+  .s3 p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 20px; }
+
+  .s4 h1 {
+    font-size: 45px; }
+  .s4 .s4-title {
+    width: 500px; }
+  .s4 p {
+    display: block;
+    font-size: 20px; }
+
+  #footer {
+    height: 170px;
+    padding: 30px 40px; }
+    #footer .left {
+      float: left;
+      margin-top: 20px;
+      margin-bottom: 0;
+      text-align: left;
+      width: 58px; }
+    #footer .right {
+      float: right;
+      margin-top: 15px;
+      margin-bottom: 0;
+      text-align: right;
+      width: 272px; }
+    #footer .socialIcons {
+      width: 100%; }
+    #footer p {
+      display: block; } }
+@media (min-width: 1001px) and (max-width: 1199px) {
+  #header {
+    padding: 0 60px; }
+
+  .logo {
+    top: 25px;
+    width: 88px;
+    height: 110px; }
+
+  #menu {
+    top: 75px; }
+    #menu li {
+      margin: 0 0 0 60px; }
+      #menu li a {
+        font-size: 18px; }
+    #menu .menu-btn {
+      font-size: 18px;
+      margin-top: -45px;
+      margin-left: 40px; }
+
+  .s1 {
+    background: #24282f;
+    width: 100%;
+    height: 850px; }
+    .s1 .title {
+      top: 360px; }
+    .s1 .image {
+      background-attachment: fixed; }
+    .s1 h1 {
+      font-size: 85px;
+      line-height: 100px; }
+    .s1 .social-main {
+      width: 760px;
+      max-width: 1200px;
+      top: 200px; }
+    .s1 img {
+      width: 560px; }
+    .s1 .main-btn {
+      display: block; }
+    .s1 p {
+      font-size: 20px; }
+
+  .s2 h1 {
+    font-size: 68px;
+    line-height: 75px; }
+  .s2 p {
+    font-size: 20px; }
+
+  .s3 h2 {
+    font-size: 34px; }
+  .s3 p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 20px; }
+  .s3 .grid-4 {
+    float: left; }
+
+  .s4 h1 {
+    font-size: 45px; }
+  .s4 .s4-title {
+    width: 500px; }
+  .s4 p {
+    display: block;
+    font-size: 20px; }
+
+  #footer {
+    height: 170px;
+    padding: 30px 40px; }
+    #footer .left {
+      float: left;
+      margin-top: 20px;
+      margin-bottom: 0;
+      text-align: left;
+      width: 58px; }
+    #footer .right {
+      float: right;
+      margin-top: 15px;
+      margin-bottom: 0;
+      text-align: right;
+      width: 272px; }
+    #footer .socialIcons {
+      width: 100%; }
+    #footer p {
+      display: block; } }
 @media (min-width: 1200px) {
   .grid-container {
     max-width: 1170px; } }
