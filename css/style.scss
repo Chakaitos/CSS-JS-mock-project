@@ -32,7 +32,7 @@ src: url(../fonts/proximanova-light-webfont.woff);
 		text-decoration: none;
 	}
 
-	h1 {
+	h1, h2 {
 		font-family: 'proximanova_light';
 		font-size: 30px;
 		color: #221f1f;
@@ -374,11 +374,13 @@ src: url(../fonts/proximanova-light-webfont.woff);
 	width: 100%;
 	height: 100%;
 	top: 0;
-	z-index: 999999;
+	z-index: 1000;
 	display: none;
 	opacity: 0;
 }
 #getStarted {
+	margin-top: -133px;
+	margin-left: -270px;
 	background: #202226;
 	position: fixed;
 	width: 540px;
@@ -394,8 +396,7 @@ src: url(../fonts/proximanova-light-webfont.woff);
 	h2 {
 		font-size: 40px;
 		color: #fff;
-	}
-
+	} 
 	p {
 		color: #f1f1f3;
 		font-size: 16px;
@@ -403,20 +404,50 @@ src: url(../fonts/proximanova-light-webfont.woff);
 		margin-bottom: 30px;
 		line-height: 180%;
 	}
-
+	span {
+		display: inline-block;
+	}
 	.signup {
 		margin: 20px 0 5px 0;
 	}
-
+	input[type=email] {
+		background: #fff;
+		padding: 14px 10px 8px;
+		border-radius: 3px;
+		border: 0;
+		box-shadow: inset 0 0 3px #999;
+		width: 350px;
+		font-size: 18px;
+		transition: all .1s ease-in-out;
+	}
+	input[type=email]:focus {
+		outline: 0;
+	}
+	input[type=submit] {
+		background: 0;
+		border: 2px solid #16ffbd;
+		padding: 12px 22px 8px 22px;
+		border-radius: 3px;
+		transition: all .2s ease-in-out;
+		font-family: 'proximanova_light';
+		font-size: 16px;
+		color: #16ffbd;
+		float: right;
+		font-weight: 700;
+	}
+	input[type=submit]:hover {
+		background: #16ffbd;
+		color: #2d2e33;
+	}
 	.submitted {
 		text-align: center;
+		font-family: 'proximanova_light';
 		color: #16ffbd;
 		padding: 14px 10px 10px 10px;
 		border: 1px solid #16ffbd;
 		border-radius: 5px;
 		line-height: 24px;
 	}
-
 	.hidden {
 		display: none;
 	}
@@ -594,6 +625,21 @@ src: url(../fonts/proximanova-light-webfont.woff);
 	}	
 	#getStarted {
 		width: 100%;
+		margin-top: -172px;
+		margin-left: -200px;
+
+		input[type=submit] {
+			width: 100%;
+		}
+
+		input[type=email] {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+
+		p {
+			padding: 0 0;
+		}
 	}
 }
 
